@@ -26,6 +26,7 @@
 		
 		//文件上传
 		$.each($('input:file'), function(index, item){
+			//文件压缩
 			$(item).localResizeIMG({
 				//width : 800,
 				quality : 1,
@@ -33,18 +34,16 @@
 					util.showMask();
 				},
 				success : function(result){
-					var imgData = result.base64;
-					console.log(imgData);
+					var imgData = result.clearBase64;
 					Quagga.decodeSingle({
+						//解码方式，与条形码的编码方式有关
 					    decoder: {
 					        readers: ["code_128_reader"] // List of active readers
 					    },
-					    debug: true,
 					    locate: true, // try to locate the barcode in the image
-					    src: imgData // or 'data:image/jpg;base64,' + data
+					    src: 'data:image/jpg;base64,' + imgData // or 'data:image/jpg;base64,' + data
 					}, function(result){
 					    if(result) {
-					    	console.log(result);
 					    	if(result.codeResult) {
 						        $("#result").val(result.codeResult.code);
 					    	} else {
