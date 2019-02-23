@@ -2,7 +2,7 @@
 
 ​	这是一个利用quagga js扫描条形码的项目。
 
-​	有关quagga js可以访问[quagga](https://serratus.github.io/quaggaJS/官网
+​	有关quagga js可以访问[quagga](https://serratus.github.io/quaggaJS/)官网
 
 ​	主要代码段是：
 
