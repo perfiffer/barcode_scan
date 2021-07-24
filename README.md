@@ -62,3 +62,6 @@ Quagga.decodeSingle({
 * code_93_reader
 
 ​	代码支持在手机端拉起摄像头进行条形码扫描。
+
+[条形码生成](https://www.barcode-generator.de/V2/zh/index.jsp)
+条形码生成
